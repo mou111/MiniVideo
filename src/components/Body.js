@@ -1,12 +1,13 @@
 import React from "react";
-
+import VideoContainer from "./VideoContainer";
+import ButtonList from "./ButtonList";
 const Body =() =>{
     return <div>
         <div className="m-5">
-            Categories
+            <ButtonList/>
         </div>
         <div className="m-5">
-            Video Container
+            <VideoContainer/>
         </div>
     </div>
 };

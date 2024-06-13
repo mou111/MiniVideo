@@ -13,10 +13,13 @@ const AppSlice =  createSlice(
         doRandomStuff :(state)=>{
 
         },
+        closeMenu:(state)=>{
+            state.isMenuOpen=false;
+        }
     },
 }
 
 );
 
-export const {toggleMenu ,doRandomStuff} = AppSlice.actions;
+export const {toggleMenu ,doRandomStuff,closeMenu} = AppSlice.actions;
 export default AppSlice.reducer;

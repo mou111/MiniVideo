@@ -5,6 +5,20 @@ import Sidebar from './common/Sidebar';
 import Body from './components/Body';
 import { Provider } from 'react-redux';
 import store from './utils/store';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import VideoPage from './components/VideoPage';
+
+const appRouter = createBrowserRouter([{
+path :"/",
+element :<Body/>
+},
+{
+  path:"/watch",
+  element :<VideoPage/>
+}
+
+]
+);
 function App() {
   return (
     <Provider store ={store}>
@@ -17,7 +31,7 @@ function App() {
         <Sidebar/>
     </div>
     <div>
-      <Body/>
+      <RouterProvider router={appRouter}></RouterProvider>
     </div>
      </div>
     </div>
